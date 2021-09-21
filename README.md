@@ -386,4 +386,4 @@ Some resources, links, books, and papers related to mostly Windows Internals and
 
 **Certifications**
 - Offensive Security Exploitation Expert (OSEE)
-- Giac GXPN
+- Giac GXPN 
