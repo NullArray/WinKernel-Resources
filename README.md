@@ -298,7 +298,7 @@ Some resources, links, books, and papers related to mostly Windows Internals and
 - [Selling 0-Days to Governments and Offensive Security Companies](https://www.youtube.com/watch?v=ZDHHGZlEfsQ)
 
 
-** Malware Samples **
+**Malware Samples**
 
 As far as advanced malware research is concerned i thought it fitting to include a sub-catagory here dedicated to publically
 available Malware. Rootkits, Bootkits and related low level security and development items to be exact, not just for windows but other platforms as well. Find the list below.
