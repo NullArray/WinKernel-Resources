@@ -365,7 +365,8 @@ Some resources, links, books, and papers related to mostly Windows Internals and
 
 - [Digging for IE11 Sandbox Escapes Part 1](https://www.youtube.com/watch?v=q9dnYno_Moc)
 
-## Favorite books of mine
+
+## Interesting Books
 
 - Windows Internals, Part 1 (Pavel Yosifovich, and some others)
 - Windows 10 System Programming, Part 1 (Pavel Yosifovich)
