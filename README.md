@@ -236,7 +236,7 @@ Some resources, links, books, and papers related to mostly Windows Internals and
 - [Windows Drivers Part 2: IOCTLs](https://cylus.org/windows-drivers-part-2-ioctls-c678526f90ae)
 - [Sending Commands From Your Userland Program to Your Kernel Driver using IOCTL](https://ired.team/miscellaneous-reversing-forensics/windows-kernel/sending-commands-from-userland-to-your-kernel-driver-using-ioctl)
 
-## Windows internals
+## Windows Internals
 
 **Talks / video recordings**
 
@@ -296,6 +296,48 @@ Some resources, links, books, and papers related to mostly Windows Internals and
 - [W32.Duqu: The Precursor to the Next Stuxnet](https://www.youtube.com/watch?v=SbkXffokmPE)
 - [Kernel Mode Threats and Practical Defenses](https://www.youtube.com/watch?v=BBJgKuXzfwc)
 - [Selling 0-Days to Governments and Offensive Security Companies](https://www.youtube.com/watch?v=ZDHHGZlEfsQ)
+
+
+** Malware Samples **
+
+As far as advanced malware research is concerned i thought it fitting to include a sub-catagory here dedicated to publically
+available Malware. Rootkits, Bootkits and related low level security and development items to be exact, not just for windows but other platforms as well. Find the list below.
+
+##### Rootkits
+
+- [Spectre](https://github.com/D4stiny/spectre)
+- [Windows Hijack](https://github.com/thesecretclub/window_hijack)
+- [SCShell](https://github.com/Mr-Un1k0d3r/SCShell)
+- [Phys-MEM R/w](https://github.com/zouxianyu/PhysicalMemoryRW)
+- [KernelHiddenExecute](https://github.com/zouxianyu/KernelHiddenExecute)
+- [Gina_Public](https://github.com/isoadam/gina_public)
+- [driverless-basic-driver](https://github.com/GayPig/driverless-basic-driver)
+- [SMB Door](https://github.com/zerosum0x0/smbdoor)
+- [BypassDriverDetection](https://github.com/KIDofot/BypassDriverDetection_And_Kill360Process)
+- [UTK Module](https://github.com/longmode/UTKModule)
+- [cheat-driver](https://github.com/nkga/cheat-driver)
+- [HWIDFaker](https://github.com/lantaoxu/HWIDFaker)
+- [puppetstrings](https://github.com/zerosum0x0/puppetstrings)
+- [XHunter](https://github.com/Psychotropos/xhunter1_privesc)
+- [ETR-Zero](https://github.com/HoShiMin/EnjoyTheRing0)
+- [WinDriver x32](https://github.com/hackedteam/driver-win32)
+- [WinDriver x64](https://github.com/hackedteam/driver-win64)
+- [CSurage's Rootkit](https://github.com/csurage/Rootkit)
+- [Greenkit Rootkit](https://github.com/Nervous/GreenKit-Rootkit)
+- [R77-Rootkit](https://github.com/bytecode-77/r77-rootkit)
+- [WinReg-Rootkit](https://github.com/Cr4sh/WindowsRegistryRootkit)
+- [Multiple Windows Rootkits](https://github.com/Alifcccccc/Windows-Rootkits)
+- [DRV-Hide](https://github.com/Cr4sh/DrvHide-PoC)
+- [FakeMBR](https://github.com/MalwareTech/FakeMBR)
+- [PTBBypass](https://github.com/Cr4sh/PTBypass-PoC)
+- [KungFu-Malware](https://github.com/psaneme/Kung-Fu-Malware)
+- [Trojan - Cockrroach](https://github.com/MinhasKamal/TrojanCockroach)
+
+##### Bootkits
+
+I will be adding these when i have the related list sorted.
+
+--------------------------------------------------------------
 
 **Articles / papers**
 
@@ -365,6 +407,7 @@ Some resources, links, books, and papers related to mostly Windows Internals and
 
 - [Digging for IE11 Sandbox Escapes Part 1](https://www.youtube.com/watch?v=q9dnYno_Moc)
 
+-------------------------------------------------------
 
 ## Interesting Books
 
