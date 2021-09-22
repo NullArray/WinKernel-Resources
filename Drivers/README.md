@@ -21,7 +21,8 @@ Priveleged memory read/write vulnerabilities and more.
     Map Physical IOCTL: 0x8807200C
     Unmap Physical IOCTL: 0x88072010
 ```
-   PoC: https://github.com/LimiQS/AsusDriversPrivEscala/blob/master/PoC-fixed.cs
+   [PoC](https://github.com/LimiQS/AsusDriversPrivEscala/blob/master/PoC-fixed.cs)
+   
 ---------------------------------------
 
 **ATI**
@@ -43,7 +44,8 @@ Priveleged memory read/write vulnerabilities and more.
     Device Name: "\\.\aswVmm"
     Hook IOCTL: 0xA000E804
 ```   
-   PoC: https://github.com/tanduRE/AvastHV/
+  [PoC](https://github.com/tanduRE/AvastHV/)
+   
 ---------------------------------------
 
 **Biostar**
@@ -119,7 +121,8 @@ _Extra Info_
     Device Name: "\\.\{E8F2FF20-6AF7-4914-9398-CE2132FE170F}"
     Notes: CVE-2019-8372
 ```    
-   PoC: http://jackson-t.ca/lg-driver-lpe.html
+   [PoC](http://jackson-t.ca/lg-driver-lpe.html)
+   
 ---------------------------------------
 
 MSI/Microstar
@@ -133,7 +136,8 @@ MSI/Microstar
     Notes: Packaged with MSI
     Can read/write MSR
 ```
-   PoC: https://github.com/rwfpl/rewolf-msi-exploit
+   [PoC](https://github.com/rwfpl/rewolf-msi-exploit)
+   
 ---------------------------------------
 
 PC-Doctor
@@ -147,7 +151,8 @@ PC-Doctor
 
     Notes: Packaged with Dell SupportAssist
 ```  
-   PoC: https://github.com/SamLarenN/SpeedFan-Exploit/blob/master/SpeedFan%20Exploit/Speedfan.cpp
+   [PoC](https://github.com/SamLarenN/SpeedFan-Exploit/blob/master/SpeedFan%20Exploit/Speedfan.cpp)
+   
 ---------------------------------------
 
 SOKNO S.R.L.
@@ -159,7 +164,8 @@ SOKNO S.R.L.
     Write Physical IOCTL: 0x9C40242C
     Read MSR: 0x9C402438
 ```
-   PoC: https://github.com/SamLarenN/SpeedFan-Exploit/blob/master/SpeedFan%20Exploit/Speedfan.cpp
+   [PoC](https://github.com/SamLarenN/SpeedFan-Exploit/blob/master/SpeedFan%20Exploit/Speedfan.cpp)
+   
 ---------------------------------------
 **Zemana**
 ```
@@ -169,7 +175,7 @@ SOKNO S.R.L.
     Open full access handle IOCTL: 0x80002010/0x8000204C
     Notes: CVE-2018-6606
 ```    
-   PoC: https://github.com/SouhailHammou/Exploits/blob/master/CVE-2018-6606%20-%20MalwareFox%20AntiMalware%20LPE/Malwarefox_privescl_1.c
+   [PoC](https://github.com/SouhailHammou/Exploits/blob/master/CVE-2018-6606%20-%20MalwareFox%20AntiMalware%20LPE/Malwarefox_privescl_1.c)
 
 ---------------------------------------
 
