@@ -5,7 +5,175 @@ development as well as exploitation.
 
 
 
-### Vulnerable driver List
+### Driver List
+
+Priveleged memory read/write vulnerabilities and more. 
+
+ **ASUS**
+ 
+```    
+    EIO64.sys MmMapIoSpace/MmUnmapIoSpace
+    IOMap64.sys MmMapIoSpace/MmUnmapIoSpace
+
+    ATSZIO64.sys ZwMapViewOfSection/ZwUnmapViewOfSection/MmGetPhysicalAddress
+
+    Device Name: ""\\.\ATSZIO"
+    Map Physical IOCTL: 0x8807200C
+    Unmap Physical IOCTL: 0x88072010
+```
+   PoC: https://github.com/LimiQS/AsusDriversPrivEscala/blob/master/PoC-fixed.cs
+---------------------------------------
+
+**ATI**
+
+```
+    atillk64.sys MmMapIoSpace/MmUnmapIoSpace/MmBuildMdlForNonPagedPool/MmMapLockedPages
+
+    Device Name: "\\.\atillk64"
+    Map/Unmap IOCTLs: 0x9C402534, 0x9C402538, 0x9C402544, 0x9C402548
+    MDL IOCTLs: 0x9C40254C, 0x9C402558, 0x9C402560, 0x9C402564
+```
+---------------------------------------
+
+**Avast**
+
+```
+    aswVmm.sys SSDT Hooking
+
+    Device Name: "\\.\aswVmm"
+    Hook IOCTL: 0xA000E804
+```   
+   PoC: https://github.com/tanduRE/AvastHV/
+---------------------------------------
+
+**Biostar**
+```
+    BS_Flash64.sys MmMapIoSpace/MmUnmapIoSpace/MmMapLockedPages/ExAllocatePoolWithTag/ExFreePoolWithTag
+
+    Device Name: "\\.\BS_Flash64"
+    Map/Unmap IOCTL: 0x222000
+    Allocate IOCTL: 0x22203C
+
+    BS_I2c64.sys MmMapIoSpace/MmUnmapIoSpace
+    BSMEMx64.sys MmMapIoSpace/MmUnmapIoSpace/MmGetPhysicalAddress
+    BSMIXP64.sys MmMapIoSpace/MmUnmapIoSpace/MmGetPhysicalAddress
+```
+---------------------------------------
+
+**Capcom**
+```
+    Capcom.sys MmGetSystemRoutineAddress
+
+    Device Name: "\\.\Htsysm72FB"
+    Execute IOCTL: 0xAA013044
+```
+---------------------------------------
+
+**CPUID**
+```
+    cpuz141.sys MmMapIoSpace/MmUnmapIoSpace
+
+    Device Name: "\\.\cpuz141"
+    Read Register IOCTL: 0x9C402428
+    Physical Read: 0x9C402420
+    Physical Write: 0x9C402430
+
+    Notes: CVE-2017-15303
+```
+---------------------------------------
+
+**CrystalMark**
+```
+    WinRing0x64.sys MmMapIoSpace/MmUnmapIoSpace
+
+    Device Name: "\\.\WinRing0_1_0_1"
+    Map/Unmap IOCTL: 0x9C406104
+```
+---------------------------------------
+
+**Huawei**
+
+```
+    HwOs2Ec10x64.sys MmMapIoSpaceEx/KeInitializeApc/KeInsertQueueApc
+
+    Device Name: "\\.\HwOs2EcDevX64"
+    Notes: CVE-2019-5241
+```
+_Extra Info_
+
+`sub_140009160`
+
+- allocates RWX page in some target process;
+- resolves CreateProcessW and CloseHandle function pointers in the address space of the target process;
+- copies a code area from the driver as well as what seemed to be a parameter block to the allocated page; and
+- performs User APC injection targeting that page
+- More Information [here](https://www.microsoft.com/security/blog/2019/03/25/from-alert-to-driver-vulnerability-microsoft-defender-atp-investigation-unearths-privilege-escalation-flaw/)
+---------------------------------------
+
+**LG Driver**
+```
+    lha.sys
+    Map IOCTL: 0x9C402FD8
+    Unmap IOCTL: 0x9C402FDC
+
+    Device Name: "\\.\{E8F2FF20-6AF7-4914-9398-CE2132FE170F}"
+    Notes: CVE-2019-8372
+```    
+   PoC: http://jackson-t.ca/lg-driver-lpe.html
+---------------------------------------
+
+MSI/Microstar
+```
+    NTIOLib_x64.sys MmMapIoSpace/MmUnmapIoSpace
+
+    Device Name: "\\.\NTIOLib_LiveUpdate"
+    Read IOCTL: 0xC3506104
+    Write IOCTL: 0xC350A108
+
+    Notes: Packaged with MSI
+    Can read/write MSR
+```
+   PoC: https://github.com/rwfpl/rewolf-msi-exploit
+---------------------------------------
+
+PC-Doctor
+```
+    pcdsrvc_x64.pkms MmMapIoSpace/MmProbeAndLockPages/
+
+    Device Name: "\\.\PCDSRVC{3B54B31B-D06B6431-06020200}_0"
+    GetPhysicalAddress IOCTL: 0x222080
+    Read/Write Physical IOCTL: 0x222084, 0x222088
+    Read/Write MSR IOCTL: 0x222180/0x222184
+
+    Notes: Packaged with Dell SupportAssist
+```  
+   PoC: https://github.com/SamLarenN/SpeedFan-Exploit/blob/master/SpeedFan%20Exploit/Speedfan.cpp
+---------------------------------------
+
+SOKNO S.R.L.
+```
+    speedfan.sys MmMapIoSpace/MmMapIoSpace/MmUnmapIoSpace
+
+    Device Name: "\\.\SpeedFan"
+    Read Physical IOCTL: 0x9C402428
+    Write Physical IOCTL: 0x9C40242C
+    Read MSR: 0x9C402438
+```
+   PoC: https://github.com/SamLarenN/SpeedFan-Exploit/blob/master/SpeedFan%20Exploit/Speedfan.cpp
+---------------------------------------
+**Zemana**
+```
+    zam64.sys ZwOpenProcess
+
+    Device name: "\\.\ZemanaAntiMalware"
+    Open full access handle IOCTL: 0x80002010/0x8000204C
+    Notes: CVE-2018-6606
+```    
+   PoC: https://github.com/SouhailHammou/Exploits/blob/master/CVE-2018-6606%20-%20MalwareFox%20AntiMalware%20LPE/Malwarefox_privescl_1.c
+
+---------------------------------------
+
+## Vulnerable Drivers List
 
 A download link will be provided shortly courtesy of [Namazso](https://www.unknowncheats.me/forum/members/911201.html)
 
