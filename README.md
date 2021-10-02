@@ -335,7 +335,18 @@ available Malware. Rootkits, Bootkits and related low level security and develop
 
 ##### Bootkits
 
-I will be adding these when i have the related list sorted.
+- [umap](https://github.com/btbd/umap)
+- [rk2017](https://github.com/DeviceObject/rk2017)
+- [ChangeDiskSector](https://github.com/DeviceObject/ChangeDiskSector)
+- [Uefi_HelloWorld](https://github.com/DeviceObject/Uefi_HelloWorld)
+- [ShitDrv](https://github.com/DeviceObject/ShitDrv)
+- [DarkCloud](https://github.com/DeviceObject/DarkCloud)
+- [Rovnix](https://github.com/nyx0/Rovnix)
+- [TinyXPB](https://github.com/MalwareTech/TinyXPB)
+- [Win64-Rovnix-VBR-Bootkit](https://github.com/m0n0ph1/Win64-Rovnix-VBR-Bootkit)
+- [Gozi-MBR](https://github.com/NextSecurity/Gozi-MBR-rootkit)
+- [vector-edk](https://github.com/NextSecurity/vector-edk)
+- [booty](https://github.com/ahixon/booty)
 
 --------------------------------------------------------------
 
